@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Products.module.css';
 import { collection, onSnapshot } from 'firebase/firestore';
-import { useProducts } from '../context/ProductContext';
-import { db } from '../firebaseInit';
+import { useProducts } from '../../context/ProductContext';
+import { db } from '../../firebaseInit';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinner-material';
-import Item from './Item';
-import Filter from '../components/Filter';
+import Item from '../Item';
+import Filter from '../Filter';
 
 const Products = () => {
   const { products, setProducts, searchTerm, setSearchTerm, filteredProducts, setFilteredProducts } = useProducts();

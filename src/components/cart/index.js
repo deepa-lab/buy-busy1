@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './Cart.module.css';
 import { collection, onSnapshot, deleteDoc, doc, updateDoc } from 'firebase/firestore';
-import { db } from '../firebaseInit';
+import { db } from '../../firebaseInit';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinner-material';
 import { toast, ToastContainer } from 'react-toastify';
 
-const Cart = () => {
+const Index = () => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [items, setItems] = useState([]);
@@ -146,4 +146,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Index;

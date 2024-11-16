@@ -4,7 +4,7 @@ import { db } from '../firebaseInit';
 import { collection, addDoc, onSnapshot, updateDoc, doc } from 'firebase/firestore';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import styles from './Products.module.css';
+import styles from './products/Products.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 

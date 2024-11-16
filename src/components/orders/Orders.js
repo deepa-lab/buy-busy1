@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from "./Orders.module.css";
 import { collection, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebaseInit';
+import { db } from '../../firebaseInit';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinner-material';
