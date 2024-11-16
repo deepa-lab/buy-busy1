@@ -10,8 +10,8 @@ import { useAuth } from '../context/AuthContext';
 
 const Item = ({ product }) => {
     const [cart, setCart] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [qty, setQty] = useState(1);
+    const [, setLoading] = useState(true);
+    const [qty] = useState(1);
     const { user} = useAuth();
     const navigate = useNavigate();
     const fetchProducts = useCallback(() => {

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useAuth } from '../context/AuthContext';
 import styles from "./Header.module.css"
 
 const Header = () => {
-  const { user, loading } = useAuth();
+  const { user } = useAuth();
   return (
     <div className={styles.header}>
     <div className={styles.logo}>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword,
-signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import styles from "./SignUp.module.css";
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+    const [, setError] = useState(null);
     const auth = getAuth();
     const handleSignUp = async () => {
     try {

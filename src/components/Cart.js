@@ -5,8 +5,6 @@ import { db } from '../firebaseInit';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinner-material';
 import { toast, ToastContainer } from 'react-toastify';
-import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);

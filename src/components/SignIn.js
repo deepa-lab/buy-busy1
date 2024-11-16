@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 import styles from "./SignIn.module.css";
-import { getAuth,
-    signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
@@ -10,10 +8,9 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const auth = getAuth();
     const { login } = useAuth();
     const navigate = useNavigate();
-    const { user, loading } = useAuth();
+    const { user } = useAuth();
     useEffect(()=>{
         if(user){
         navigate("/products");
@@ -21,11 +18,12 @@ const SignIn = () => {
         else{
         navigate("/")
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[user])
 
     const handleSignIn = async () => {
         try {
-        const res = await await login(email, password);
+         await await login(email, password);
         navigate("/products");
         console.log('User signed in successfully!');
         } catch (error) {
